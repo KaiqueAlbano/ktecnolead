@@ -1,7 +1,11 @@
-import "./App.css";
+import Header from "@/pages/Header";
 
 function App() {
-  return <></>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }
 
 export default App;

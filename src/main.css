@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 12% / 0.8) 0%, hsl(220 20% 8% / 0.6) 100%);
+    --border: 220 15% 18%;
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / .3);
+
+}
+
+@layer utilities {
+    .glass-card {
+        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow-card);
+        border-radius: 1rem;
+        border-width: 1px;
+        border-color: hsl(var(--border) / .5);
+        background: var(--gradient-card);
+    }
+}
+
+@theme {
+    --color-light-much: hsl(222, 10%, 55%);
+    --color-accent: hsl(0, 0%, 81%);
+}
