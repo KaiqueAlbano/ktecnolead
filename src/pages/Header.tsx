@@ -1,5 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import IconKtech from "../icons/IconKtech";
+import Button from "../componentes/button/Button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +18,7 @@ const Header = () => {
         <div className="glass-card px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">
-                K
-              </span>
-            </div>
-            <span className="font-bold text-xl hidden sm:block">KTech</span>
+            <IconKtech width={50} height={50} />
           </a>
 
           {/* Desktop Nav */}
@@ -30,7 +27,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-light-much hover:text-accent transition-colors duration-200 text-sm font-medium"
+                className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium"
               >
                 {item.label}
               </a>
@@ -39,17 +36,14 @@ const Header = () => {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-4">
-            {/* <Button variant="ghost" size="sm">
-              Login
+            <Button className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]">
+              Fale Conosco
             </Button>
-            <Button variant="default" size="sm">
-              Começar Grátis
-            </Button> */}
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-accent"
+            className="md:hidden text-accent cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -64,13 +58,16 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-light-much hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
+                  className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
               <hr className="border-border" />
+              <Button className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]">
+                Fale Conosco
+              </Button>
             </div>
           </div>
         )}

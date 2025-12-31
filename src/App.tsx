@@ -1,9 +1,11 @@
-import Header from "@/pages/Header";
+import Header from "./pages/Header";
+import Presentation from "./pages/Presentation";
 
 function App() {
   return (
-    <main>
+    <main className="min-h-screen">
       <Header />
+      <Presentation />
     </main>
   );
 }

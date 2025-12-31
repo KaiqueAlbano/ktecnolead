@@ -1,24 +1,95 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap");
 
-:root {
-    --gradient-card: linear-gradient(145deg, hsl(220 20% 12% / 0.8) 0%, hsl(220 20% 8% / 0.6) 100%);
-    --border: 220 15% 18%;
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / .3);
-
-}
-
-@layer utilities {
-    .glass-card {
-        backdrop-filter: blur(20px);
-        box-shadow: var(--shadow-card);
-        border-radius: 1rem;
-        border-width: 1px;
-        border-color: hsl(var(--border) / .5);
-        background: var(--gradient-card);
-    }
-}
-
+/* =========================
+   THEME (Design Tokens)
+========================= */
 @theme {
-    --color-light-much: hsl(222, 10%, 55%);
-    --color-accent: hsl(0, 0%, 81%);
+  /* Color */
+  --main: 31 100% 50%;
+  --primary: 25 82% 48%;
+  --one-white: 30 10% 95%;
+  --light: 222 10% 55%;
+  --accent: 0 0% 81%;
+  --background: 220 20% 6%;
+
+  --color-main: hsl(var(--main));
+  --color-primary: hsl(var(--primary));
+  --color-one-white: hsl(var(--one-white));
+  --color-light: hsl(var(--light));
+  --color-accent: hsl(var(--accent));
+  --color-background: hsl(var(--background));
+
+  /* Border */
+  --border: 220 15% 18%;
+  --color-border: hsl(var(--border));
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(25 95% 53%) 0%,
+    hsl(35 100% 60%) 100%
+  );
+  --gradient-card: linear-gradient(
+    145deg,
+    hsl(220 20% 12% / 0.8),
+    hsl(220 20% 8% / 0.6)
+  );
+  --gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 25% 4%));
+
+  /* Shadows */
+  --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+  --shadow-glow: 0 0 30px hsl(var(--primary) / 0.4);
+}
+
+/* =========================
+   UTILITIES
+========================= */
+@layer utilities {
+  .glass-card {
+    backdrop-filter: blur(20px);
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-card);
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+/* =========================
+   BASE
+========================= */
+@layer base {
+  body {
+    @apply bg-background text-[hsl(var(--one-white))] font-sans antialiased;
+    font-family: "Sora", sans-serif;
+  }
 }
