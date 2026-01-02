@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
 import ContadorDecimal from "../componentes/contador/Contador";
@@ -86,9 +85,7 @@ const Presentation = () => {
                   {""}
                   {stat.type}
                 </div>
-                <div className="text-muted-foreground text-xs">
-                  {stat.label}
-                </div>
+                <div className="text-light text-xs">{stat.label}</div>
               </div>
             ))}
           </div>

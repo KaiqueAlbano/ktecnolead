@@ -6,10 +6,11 @@ import {
   Globe,
   Bot,
   Cog,
+  MessageCircle,
 } from "lucide-react";
-import IconPva from "../icons/IconPva";
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
+import { motion } from "motion/react";
 
 const features = [
   {
@@ -96,6 +97,18 @@ const features = [
       );
     },
   },
+  {
+    icon: MessageCircle,
+    title: "Chat Bot",
+    description:
+      "Chatbots inteligentes para atendimento automatizado e suporte aos seus clientes.",
+    fn: () => {
+      UtilServices.getWhatsApp(
+        "5511964861193",
+        "Olá! Vim pelo site e gostaria de saber mais sobre automações de ChatBot.",
+      );
+    },
+  },
 ];
 
 const Services = () => {
@@ -108,42 +121,62 @@ const Services = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            Serviços
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Nossos <span className="gradient-text">serviços</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Oferecemos soluções completas de automação e desenvolvimento para
-            atender às necessidades da sua empresa.
-          </p>
-        </div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        >
+          <div className="text-center mb-16">
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
+              Serviços
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Nossos <span className="gradient-text">serviços</span>
+            </h2>
+            <p className="text-light text-lg max-w-2xl mx-auto">
+              Oferecemos soluções completas de automação e desenvolvimento para
+              atender às necessidades da sua empresa.
+            </p>
+          </div>
+        </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="glass-card p-8 hover-lift group"
-              style={{ animationDelay: `${index * 100}ms` }}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.15, // 👈 atraso progressivo
+              }}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <feature.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-light leading-relaxed mb-5">
-                {feature.description}
-              </p>
-              <Button
-                variant="sbmais"
-                size="sbmais"
-                className={`cursor-pointer`}
-                onClick={feature.fn}
+              <div
+                key={feature.title}
+                className="glass-card p-8 hover-lift group h-full"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                Saiba mais →
-              </Button>
-            </div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <feature.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-light leading-relaxed mb-5">
+                  {feature.description}
+                </p>
+                <Button
+                  variant="sbmais"
+                  size="sbmais"
+                  className={`cursor-pointer`}
+                  onClick={feature.fn}
+                >
+                  Saiba mais →
+                </Button>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
