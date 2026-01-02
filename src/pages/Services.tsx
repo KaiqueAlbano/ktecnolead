@@ -117,9 +117,6 @@ const Services = () => {
       id="services"
       className="py-24 px-4 relative sm:scroll-mt-10 scroll-mt-80"
     >
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -152,7 +149,7 @@ const Services = () => {
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
-                delay: index * 0.15, // 👈 atraso progressivo
+                // delay: index * 0.5, // 👈 atraso progressivo
               }}
             >
               <div

@@ -4,7 +4,7 @@ import ContadorDecimal from "../componentes/contador/Contador";
 
 const Presentation = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 lg:mt-10 overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-4 lg:mt-10 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Main glow */}

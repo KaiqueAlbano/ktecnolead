@@ -5,11 +5,6 @@ import UtilServices from "../services/UtilServices";
 const CTA = () => {
   return (
     <section id="contact" className="py-5 px-4 sm:scroll-mt-30 scroll-mt-100">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px]" />
-      </div>
-
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="glass-card p-12 md:p-16 text-center glow-border">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
