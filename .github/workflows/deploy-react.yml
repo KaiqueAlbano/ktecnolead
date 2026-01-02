@@ -1,13 +1,13 @@
 name: Deploy React App
 
 # Dispara sempre que houver push na branch main
-# E somente se houver alteração na pasta WebKTech/webktech
+# E somente se houver alteração na pasta ktecnolead/
 on:
   push:
     branches:
       - main
     paths:
-      - "WebKTech/webktech/**"
+      - "ktecnolead/**"
 
 jobs:
   build-and-deploy:
