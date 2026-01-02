@@ -2,15 +2,27 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import IconKtech from "../icons/IconKtech";
 import Button from "../componentes/button/Button";
+import UtilServices from "../services/UtilServices";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Recursos", href: "#features" },
-    { label: "Como Funciona", href: "#how-it-works" },
-    { label: "Depoimentos", href: "#testimonials" },
+    { label: "Nosso Serviços", href: "services" },
+    { label: "Como Funciona", href: "howitworks" },
+    { label: "Avaliações", href: "testimonials" },
+    { label: "Contato", href: "contact" },
   ];
+
+  function scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
@@ -26,8 +38,8 @@ const Header = () => {
             {navItems.map((item) => (
               <a
                 key={item.label}
-                href={item.href}
-                className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium"
+                className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium cursor-pointer"
+                onClick={() => scrollToSection(item.href)}
               >
                 {item.label}
               </a>
@@ -36,7 +48,15 @@ const Header = () => {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]">
+            <Button
+              className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]"
+              onClick={() => {
+                UtilServices.getWhatsApp(
+                  "5511964861193",
+                  "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
+                );
+              }}
+            >
               Fale Conosco
             </Button>
           </div>
@@ -57,15 +77,22 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item.label}
-                  href={item.href}
-                  className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium py-2"
-                  onClick={() => setIsOpen(false)}
+                  className="text-light hover:text-accent transition-colors duration-200 text-sm font-medium py-2 cursor-pointer"
+                  onClick={() => scrollToSection(item.href)}
                 >
                   {item.label}
                 </a>
               ))}
               <hr className="border-border" />
-              <Button className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]">
+              <Button
+                className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]"
+                onClick={() => {
+                  UtilServices.getWhatsApp(
+                    "5511964861193",
+                    "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
+                  );
+                }}
+              >
                 Fale Conosco
               </Button>
             </div>
