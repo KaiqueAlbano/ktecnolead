@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "ktecnolead/**"
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,7 +24,6 @@ jobs:
       # 3. Instala dependências e faz build do React
       - name: Build React app
         run: |
-          cd ktecnolead
           npm install
           CI=false npm run build
 
@@ -39,7 +35,7 @@ jobs:
           username: root
           key: ${{ secrets.VPS_KEY }}
           port: 22
-          source: "ktecnolead/dist/**"
+          source: "dist/**"
           target: "/var/www/front_lead_tmp"
           strip_components: 3
 
