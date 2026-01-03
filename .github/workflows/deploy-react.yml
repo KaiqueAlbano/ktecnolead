@@ -37,7 +37,7 @@ jobs:
           port: 22
           source: "dist/**"
           target: "/var/www/front_lead_tmp"
-          strip_components: 3
+          strip_components: 0
 
       # 5. Swap de pastas no VPS via SSH
       - name: Swap folders on VPS
