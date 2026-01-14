@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 const testimonials = [
   {
     quote:
-      "A AutoTech transformou completamente nossa operação. Reduzimos 70% do tempo gasto em tarefas manuais e nossa equipe agora foca em estratégia.",
-    author: "Maria Silva",
-    role: "CEO, TechCorp Brasil",
+      "Eu tive uma experiência muito boa no desenvolvimento do meu site. Desde o começo, me senti ouvida e respeitada em cada ideia que apresentei. foi sempre muito atencioso, paciente e disponível, o que fez toda a diferença durante o processo.",
+    author: "Rafaela",
+    role: "CEO, Lm Saude",
     rating: 5,
   },
   {
