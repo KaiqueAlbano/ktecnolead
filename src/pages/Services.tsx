@@ -7,11 +7,20 @@ import {
   Bot,
   Cog,
   MessageCircle,
+  Sparkles,
 } from "lucide-react";
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
 import { motion } from "motion/react";
+// import { Link } from "react-router-dom";
 
+const featuredService = {
+  icon: Sparkles,
+  title: "Consulta IBS/CBS",
+  description:
+    "Faça consultas online de IBS e CBS com agilidade e segurança. Sua solução para acompanhar a Reforma Tributária.",
+  link: "/consulta-ibs-cbs",
+};
 const features = [
   {
     icon: FileText,
@@ -140,7 +149,50 @@ const Services = () => {
             </p>
           </div>
         </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* new featured */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+        >
+          <div
+            className="glass-card p-8 md:p-10 relative overflow-hidden border-2 border-primary/30 hover-lift cursor-pointer"
+            onClick={() => {
+              window.open("https://fiscal.ktechno.com.br/#/ConsultaIbscbs");
+            }}
+          >
+            <div className="absolute top-4 right-4">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                🚀 Novo
+              </span>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 pointer-events-none" />
+            <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <featuredService.icon className="w-8 h-8 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {featuredService.title}
+                </h3>
+                <p className="text-light text-lg">
+                  {featuredService.description}
+                </p>
+              </div>
+              <div className="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                Conhecer solução
+                <span className="text-xl">→</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        {/* other featured */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {features.map((feature, index) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -149,7 +201,6 @@ const Services = () => {
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
-                // delay: index * 0.5, // 👈 atraso progressivo
               }}
             >
               <div

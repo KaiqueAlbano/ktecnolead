@@ -11,16 +11,16 @@ const testimonials = [
   },
   {
     quote:
-      "A facilidade de uso é impressionante. Em menos de uma semana, já tínhamos dezenas de automações funcionando perfeitamente.",
-    author: "João Santos",
-    role: "Diretor de Operações, StartupX",
+      "Empresa muito boa, criativa (soluções inovadoras para problemas existentes), cumpre prazos e um ótimo atendimento. Recomendo.",
+    author: "Carlos Eduardo",
+    role: "Controller, Motz",
     rating: 5,
   },
   {
     quote:
-      "O suporte técnico é excepcional e a plataforma é extremamente confiável. Zero downtime desde que implementamos.",
-    author: "Ana Costa",
-    role: "CTO, InnovaTech",
+      "Empresa super cordial, transparente e com muita presteza. Com certeza indico!!",
+    author: "Amanda",
+    role: "Gerente Fiscal",
     rating: 5,
   },
 ];

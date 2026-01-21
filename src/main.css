@@ -54,7 +54,7 @@
   .glass-card {
     backdrop-filter: blur(20px);
     background: var(--gradient-card);
-    border: 1px solid hsl(var(--border) / 0.5);
+    /* border: 1px solid hsl(var(--border) / 0.5); */
     border-radius: 1rem;
     box-shadow: var(--shadow-card);
   }
@@ -85,7 +85,9 @@
     z-index: -1;
   }
   .glow-border {
-    box-shadow: var(--shadow-glow), inset 0 1px 0 hsl(var(--one-white) / 0.1);
+    box-shadow:
+      var(--shadow-glow),
+      inset 0 1px 0 hsl(var(--one-white) / 0.1);
   }
 
   @keyframes slide-up {
