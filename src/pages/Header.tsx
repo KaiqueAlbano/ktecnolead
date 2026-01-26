@@ -52,7 +52,7 @@ const Header = () => {
               className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]"
               onClick={() => {
                 UtilServices.getWhatsApp(
-                  "5511964861193",
+                  "5511933773522",
                   "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
                 );
               }}
@@ -88,7 +88,7 @@ const Header = () => {
                 className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]"
                 onClick={() => {
                   UtilServices.getWhatsApp(
-                    "5511964861193",
+                    "5511933773522",
                     "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
                   );
                 }}

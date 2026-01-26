@@ -4,8 +4,8 @@ import { Instagram, Linkedin } from "lucide-react";
 const Footer = () => {
   const links = {
     Endereço: ["Av. Vila Ema, 1899 São Paulo - SP, 03281-000"],
-    Contato: ["+55 (11) 96486-1193", "+55 (11) 94130-8675"],
-    Email: ["kaiquealbano@ktechno.com.br"],
+    Contato: ["+55 (11) 93377-3522"],
+    Email: ["contato@ktechno.com.br"],
     Horário: ["Segunda a Sexta: 8h ás 18h. Suporte 24/7 para clientes"],
   };
 

@@ -59,7 +59,7 @@ const Presentation = () => {
               size="xl"
               onClick={() => {
                 UtilServices.getWhatsApp(
-                  "5511964861193",
+                  "5511933773522",
                   "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
                 );
               }}

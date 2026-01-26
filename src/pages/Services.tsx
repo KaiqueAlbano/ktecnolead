@@ -29,7 +29,7 @@ const features = [
       "Automatize a geração e validação do EFD Contribuições de forma rápida e precisa.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria sobre a automação do EFD Contribuições",
       );
     },
@@ -41,7 +41,7 @@ const features = [
       "Processamento automatizado e integração completa com Receita BX para sua operação fiscal.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre a automação do Receita BX.",
       );
     },
@@ -53,7 +53,7 @@ const features = [
       "Automatização completa do Conhecimento de Transporte para sua logística.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre a automação do CTE.",
       );
     },
@@ -65,7 +65,7 @@ const features = [
       "Consultas automatizadas ao Simples Nacional de forma rápida e eficiente.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre a automação Consulta Simples Nacional.",
       );
     },
@@ -77,7 +77,7 @@ const features = [
       "Robotic Process Automation para automatizar tarefas repetitivas e aumentar a produtividade.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre as automações de RPA",
       );
     },
@@ -89,7 +89,7 @@ const features = [
       "Criamos landing pages e sites personalizados para sua empresa alcançar mais clientes.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de informações sobre landing pages.",
       );
     },
@@ -101,7 +101,7 @@ const features = [
       "Desenvolvemos automações personalizadas para qualquer processo da sua empresa.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre automações em geral.",
       );
     },
@@ -113,7 +113,7 @@ const features = [
       "Chatbots inteligentes para atendimento automatizado e suporte aos seus clientes.",
     fn: () => {
       UtilServices.getWhatsApp(
-        "5511964861193",
+        "5511933773522",
         "Olá! Vim pelo site e gostaria de saber mais sobre automações de ChatBot.",
       );
     },
