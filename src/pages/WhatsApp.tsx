@@ -1,14 +1,25 @@
 import { MessageCircle } from "lucide-react";
 import UtilServices from "../services/UtilServices";
 
-const WhatsApp = () => {
+type HeaderProps = {
+  system: number;
+};
+
+const WhatsApp = ({ system }: HeaderProps) => {
   return (
     <a
       onClick={() => {
-        UtilServices.getWhatsApp(
-          "5511933773522",
-          "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
-        );
+        if (system === 1) {
+          UtilServices.getWhatsApp(
+            "5511933773522",
+            "Olá! Vim pelo site e tenho interesse em conhecer melhor as soluções de automação da KTechno.",
+          );
+        } else if (system === 2) {
+          UtilServices.getWhatsApp(
+            "5511933773522",
+            "Olá! Vim pelo site e tenho interesse em conhecer melhor a solução de automação para EFD-Contribuições.",
+          );
+        }
       }}
       target="_blank"
       rel="noopener noreferrer"

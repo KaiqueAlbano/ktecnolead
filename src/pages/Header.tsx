@@ -4,15 +4,33 @@ import IconKtech from "../icons/IconKtech";
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
 
-const Header = () => {
+type HeaderProps = {
+  system: number;
+};
+
+const Header = ({ system }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
-    { label: "Nosso Serviços", href: "services" },
-    { label: "Como Funciona", href: "howitworks" },
-    { label: "Avaliações", href: "testimonials" },
-    { label: "Contato", href: "contact" },
-  ];
+  type NavItem = {
+    label: string;
+    href: string;
+  };
+  let navItems: NavItem[] = [];
+
+  if (system === 1) {
+    navItems = [
+      { label: "Nosso Serviços", href: "services" },
+      { label: "Como Funciona", href: "howitworks" },
+      { label: "Avaliações", href: "testimonials" },
+      { label: "Contato", href: "contact" },
+    ];
+  } else if (system === 2) {
+    navItems = [
+      { label: "Como Funciona", href: "howitworks" },
+      { label: "Avaliações", href: "testimonials" },
+      { label: "Contato", href: "contact" },
+    ];
+  }
 
   function scrollToSection(id: string) {
     const el = document.getElementById(id);
@@ -87,10 +105,17 @@ const Header = () => {
               <Button
                 className="bg-primary px-4 p-2 text-black text-main-foreground hover:bg-primary/90 hover:shadow-glow font-semibold text-[14px]"
                 onClick={() => {
-                  UtilServices.getWhatsApp(
-                    "5511933773522",
-                    "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
-                  );
+                  if (system === 1) {
+                    UtilServices.getWhatsApp(
+                      "5511933773522",
+                      "Olá! Vim pelo site e gostaria de saber mais sobre as automações da KTechno.",
+                    );
+                  } else if (system === 2) {
+                    UtilServices.getWhatsApp(
+                      "5511933773522",
+                      "Olá! Vim pelo site e gostaria de saber mais sobre as automações do EFD-Contribuições",
+                    );
+                  }
                 }}
               >
                 Fale Conosco

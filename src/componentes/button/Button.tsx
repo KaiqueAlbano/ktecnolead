@@ -3,8 +3,12 @@ import "./Button.scss";
 
 const buttonVariants = {
   default:
-    "bg-gradient-to-r from-primary to-main text-black font-bold shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_50px_hsl(var(--primary)/0.5)] hover:scale-105",
+    "bg-gradient-to-r from-primary to-main text-white font-bold shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_50px_hsl(var(--primary)/0.5)] hover:scale-105",
   sbmais: "text-primary hover:underline",
+  whatsapp:
+    "bg-[#25D366] text-white font-semibold hover:bg-[#20BD5A] hover:scale-105 active:scale-100 shadow-lg shadow-[#25D366]/25",
+  outline:
+    "border border-border bg-transparent text-foreground hover:bg-secondary hover:border-primary/50",
 } as const;
 
 const sizeVariants = {

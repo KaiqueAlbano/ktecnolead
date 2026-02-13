@@ -15,6 +15,7 @@
   --background: 220 20% 6%;
   --whatsapp: 142 70% 45%;
   --cinza: 215, 14%, 23%;
+  --card: 0 0% 7%;
 
   --color-main: hsl(var(--main));
   --color-primary: hsl(var(--primary));
@@ -23,6 +24,7 @@
   --color-accent: hsl(var(--accent));
   --color-background: hsl(var(--background));
   --color-cinza: hsl(var(--cinza));
+  --color-card: hsl(var(--card));
 
   /* Border */
   --border: 220 15% 18%;
@@ -88,6 +90,12 @@
     box-shadow:
       var(--shadow-glow),
       inset 0 1px 0 hsl(var(--one-white) / 0.1);
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
   }
 
   @keyframes slide-up {

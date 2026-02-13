@@ -12,7 +12,6 @@ import {
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
 import { motion } from "motion/react";
-// import { Link } from "react-router-dom";
 
 const featuredService = {
   icon: Sparkles,

@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-16 px-4 border-t border-border mt-25">
+    <footer className="py-16 px-4 border-t border-border">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
@@ -38,13 +38,13 @@ const Footer = () => {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="https://www.linkedin.com/in/kaiquealbano/"
                 target="_blank"
                 className="w-10 h-10 rounded-lg bg-cinza flex items-center justify-center hover:bg-main transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -55,10 +55,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 {items.map((item) => (
                   <li key={item}>
-                    <a
-                      //   href="#"
-                      className="text-light hover:text-white text-sm transition-colors"
-                    >
+                    <a className="text-light hover:text-white text-sm transition-colors">
                       {item}
                     </a>
                   </li>

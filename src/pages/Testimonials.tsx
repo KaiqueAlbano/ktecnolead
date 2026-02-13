@@ -23,6 +23,13 @@ const testimonials = [
     role: "Gerente Fiscal",
     rating: 5,
   },
+  {
+    quote:
+      "Execução de serviços perfeita, todos os projetos foram realizados com extrema qualidade",
+    author: "Gabriel Yuri",
+    role: "Market Digital",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
