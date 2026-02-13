@@ -99,7 +99,7 @@ const HowitworksEFD = () => {
             return (
               <div
                 key={index}
-                ref={(el) => (stepsRefs.current[index] = el)}
+                // ref={(el) => (stepsRefs.current[index] = el)}
                 data-index={index}
                 className={`relative flex flex-col md:flex-row items-center gap-6 mb-20 last:mb-0 transition-all duration-700 ${
                   isVisible

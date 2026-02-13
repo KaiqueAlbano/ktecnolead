@@ -1,5 +1,5 @@
 import IconKtech from "../icons/IconKtech";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   const links = {
