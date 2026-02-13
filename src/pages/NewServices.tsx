@@ -117,10 +117,7 @@ const NewServices = () => {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       color: "from-purple-500 to-violet-500",
       fn: () => {
-        UtilServices.getWhatsApp(
-          "5511933773522",
-          "Olá! Vim pelo site e gostaria de saber mais sobre automações em geral.",
-        );
+        window.open("https://fiscal.ktechno.com.br/#/ConsultaIbscbs", "_blank");
       },
     },
     {
