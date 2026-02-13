@@ -3,12 +3,14 @@ import { useState } from "react";
 import IconKtech from "../icons/IconKtech";
 import Button from "../componentes/button/Button";
 import UtilServices from "../services/UtilServices";
+import { useNavigate } from "react-router";
 
 type HeaderProps = {
   system: number;
 };
 
 const Header = ({ system }: HeaderProps) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   type NavItem = {
@@ -47,8 +49,14 @@ const Header = ({ system }: HeaderProps) => {
       <div className="container mx-auto max-w-6xl">
         <div className="glass-card px-6 py-3 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <IconKtech width={50} height={50} />
+          <a className="flex items-center gap-2">
+            <IconKtech
+              width={50}
+              height={50}
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </a>
 
           {/* Desktop Nav */}
