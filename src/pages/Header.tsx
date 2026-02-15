@@ -55,6 +55,10 @@ const Header = ({ system }: HeaderProps) => {
               height={50}
               onClick={() => {
                 navigate("/");
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
               }}
             />
           </a>

@@ -70,21 +70,23 @@ const PresentationEFD = () => {
           </div>
 
           {/* Quick benefits row with stagger animation */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-6 mt-15">
+          <div className="grid grid-cols-2 md:grid-cols-3 justify-center gap-3 md:gap-6 mt-15">
             {[
               { icon: Clock, text: "Economize 40h/mês", delay: "100ms" },
               { icon: ShieldCheck, text: "Zero erros fiscais", delay: "200ms" },
               { icon: Zap, text: "Setup em 24h", delay: "300ms" },
             ].map((benefit, index) => (
-              <div
-                key={index}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-default`}
-                style={{ transitionDelay: benefit.delay }}
-              >
-                <benefit.icon className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  {benefit.text}
-                </span>
+              <div className="flex items-center justify-center">
+                <div
+                  key={index}
+                  className={`flex items-center justify-center w-50 gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-default`}
+                  style={{ transitionDelay: benefit.delay }}
+                >
+                  <benefit.icon className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground">
+                    {benefit.text}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

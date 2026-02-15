@@ -4,12 +4,7 @@ import ContadorDecimal from "../componentes/contador/Contador";
 import { useEffect } from "react";
 
 const Presentation = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 lg:mt-10 overflow-hidden">

@@ -302,7 +302,16 @@ const NewServices = () => {
             Não encontrou o que procura? Temos soluções personalizadas para o
             seu negócio.
           </p>
-          <Button size="lg" className="group">
+          <Button
+            size="lg"
+            className="group"
+            onClick={() => {
+              UtilServices.getWhatsApp(
+                "5511933773522",
+                "Olá! Vim pelo site e gostaria de saber mais sobre automações da ktechno.",
+              );
+            }}
+          >
             <div className="flex items-center justify-center gap-5">
               Falar com especialista
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
